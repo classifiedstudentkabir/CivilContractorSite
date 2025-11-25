@@ -186,36 +186,36 @@ export default function Home() {
 
               {/* List of advantages with icons */}
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-check text-primary text-sm"></i>
+                <li className="flex items-start gap-3 p-3 rounded-md transition-all duration-300 hover:bg-muted group">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1 transition-all duration-300 group-hover:bg-primary/20">
+                    <i className="fas fa-check text-primary text-sm transition-transform duration-300 group-hover:scale-110"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1">Experienced Team</h3>
+                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1 transition-colors duration-300 group-hover:text-primary">Experienced Team</h3>
                     <p className="text-muted-foreground font-[Inter] text-sm">
                       Skilled professionals with years of expertise in civil contracting
                     </p>
                   </div>
                 </li>
 
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-check text-primary text-sm"></i>
+                <li className="flex items-start gap-3 p-3 rounded-md transition-all duration-300 hover:bg-muted group">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1 transition-all duration-300 group-hover:bg-primary/20">
+                    <i className="fas fa-check text-primary text-sm transition-transform duration-300 group-hover:scale-110"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1">Quality Craftsmanship</h3>
+                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1 transition-colors duration-300 group-hover:text-primary">Quality Craftsmanship</h3>
                     <p className="text-muted-foreground font-[Inter] text-sm">
                       Commitment to excellence in every project with attention to detail
                     </p>
                   </div>
                 </li>
 
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-check text-primary text-sm"></i>
+                <li className="flex items-start gap-3 p-3 rounded-md transition-all duration-300 hover:bg-muted group">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1 transition-all duration-300 group-hover:bg-primary/20">
+                    <i className="fas fa-check text-primary text-sm transition-transform duration-300 group-hover:scale-110"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1">Client-Centric Approach</h3>
+                    <h3 className="font-semibold font-[Poppins] text-foreground mb-1 transition-colors duration-300 group-hover:text-primary">Client-Centric Approach</h3>
                     <p className="text-muted-foreground font-[Inter] text-sm">
                       Personalized service focused on understanding and meeting client needs
                     </p>

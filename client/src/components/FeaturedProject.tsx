@@ -18,13 +18,13 @@ interface FeaturedProjectProps {
 export default function FeaturedProject({ image, title, description, category }: FeaturedProjectProps) {
   return (
     // Project card with hover effect
-    <Card className="overflow-hidden hover-elevate transition-all duration-300" data-testid={`card-project-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+    <Card className="overflow-hidden hover-elevate transition-all duration-300 group" data-testid={`card-project-${title.toLowerCase().replace(/\s+/g, '-')}`}>
       {/* Project image container */}
       <div className="relative h-48 overflow-hidden">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           data-testid="img-project"
         />
         

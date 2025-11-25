@@ -21,8 +21,8 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
     <Card className="hover-elevate transition-all duration-300" data-testid={`card-service-${title.toLowerCase().replace(/\s+/g, '-')}`}>
       <CardContent className="p-6">
         {/* Icon container with primary color background */}
-        <div className="w-16 h-16 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-          <i className={`fas ${icon} text-3xl text-primary`}></i>
+        <div className="w-16 h-16 rounded-md bg-primary/10 flex items-center justify-center mb-4 group transition-all duration-300 hover:bg-primary/20">
+          <i className={`fas ${icon} text-3xl text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}></i>
         </div>
         
         {/* Service title */}

@@ -115,7 +115,7 @@ export default function Services() {
           
           <div className="space-y-12">
             {specializedServices.map((service, index) => (
-              <Card key={index} className="overflow-hidden">
+              <Card key={index} className="overflow-hidden hover-elevate transition-all duration-300">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                   {/* Image section */}
                   <div className={`relative h-64 lg:h-auto ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>

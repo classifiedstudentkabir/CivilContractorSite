@@ -8,7 +8,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import logoImage from "@assets/generated_images/krishna_enterprises_logo.png";
+import logoImage from "@assets/logo2-removebg-preview_1764087605470.png";
 
 export default function Header() {
   // Track the current page location using wouter's useLocation hook

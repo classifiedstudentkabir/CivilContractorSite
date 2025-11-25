@@ -78,7 +78,7 @@ export default function Header() {
             {/* Phone icon */}
             <i className="fas fa-phone text-primary"></i>
             {/* Phone number text */}
-            <span className="font-[Inter] text-sm font-medium">+915 7780 280 802</span>
+            <span className="font-[Inter] text-sm font-medium">+91 9322874711</span>
           </div>
 
           {/* MOBILE MENU BUTTON - Only visible on small screens */}

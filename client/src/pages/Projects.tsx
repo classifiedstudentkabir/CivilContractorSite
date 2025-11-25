@@ -8,7 +8,6 @@
 import { useState } from "react";
 import FeaturedProject from "@/components/FeaturedProject";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import doorImage from "@assets/generated_images/security_door_product.png";
 import roofingImage from "@assets/generated_images/roofing_installation_work.png";
 import materialsImage from "@assets/generated_images/quality_construction_materials.png";
@@ -19,9 +18,6 @@ import interiorImage from "@assets/generated_images/luxury_interior_design.png";
 export default function Projects() {
   // State for filter category selection
   const [selectedCategory, setSelectedCategory] = useState("All");
-  
-  // State for image upload preview (functionality for future backend integration)
-  const [uploadPreview, setUploadPreview] = useState<string | null>(null);
 
   // Project categories for filtering
   const categories = ["All", "Door Solutions", "Roofing", "Materials", "Fabrication", "Interior Design"];
@@ -72,21 +68,6 @@ export default function Projects() {
     ? projects 
     : projects.filter(p => p.category === selectedCategory);
 
-  // Handle image upload (preview only - actual upload will be implemented with backend)
-  // TODO: Connect to backend API for actual image upload to database
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setUploadPreview(reader.result as string);
-        console.log("Image selected for upload:", file.name);
-        // TODO: Send to backend API endpoint for storage
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
     <div className="min-h-screen" data-testid="page-projects">
       {/* PAGE HEADER */}
@@ -100,48 +81,6 @@ export default function Projects() {
           </p>
         </div>
       </div>
-
-      {/* IMAGE UPLOAD SECTION (For Admin/Team - will be restricted in production) */}
-      {/* TODO: Add authentication to restrict this to authorized users only */}
-      <section className="py-8 bg-muted border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="bg-card p-6 rounded-md border border-card-border">
-            <h3 className="text-lg font-semibold font-[Poppins] text-card-foreground mb-4">
-              <i className="fas fa-upload mr-2 text-primary"></i>
-              Upload Project Images
-            </h3>
-            <p className="text-muted-foreground font-[Inter] text-sm mb-4">
-              Add new project images to showcase your completed work (Admin only)
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Input 
-                type="file" 
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="flex-1"
-                data-testid="input-upload-image"
-              />
-              <Button data-testid="button-upload">
-                <i className="fas fa-cloud-upload-alt mr-2"></i>
-                Upload
-              </Button>
-            </div>
-            
-            {/* Preview uploaded image */}
-            {uploadPreview && (
-              <div className="mt-4">
-                <p className="text-sm text-muted-foreground mb-2">Preview:</p>
-                <img 
-                  src={uploadPreview} 
-                  alt="Upload preview" 
-                  className="h-32 object-cover rounded-md border border-border"
-                />
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* FILTER SECTION */}
       <section className="py-8 bg-background sticky top-16 z-40 border-b border-border">

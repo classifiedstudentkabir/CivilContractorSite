@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
   const { toast } = useToast();
-  
+
   // Form state management
   const [formData, setFormData] = useState({
     name: "",
@@ -40,17 +40,17 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call (replace with actual API endpoint later)
     setTimeout(() => {
       console.log("Contact form submitted:", formData);
-      
+
       // Show success message
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
-      
+
       // Reset form
       setFormData({
         name: "",
@@ -59,7 +59,7 @@ export default function Contact() {
         subject: "",
         message: ""
       });
-      
+
       setIsSubmitting(false);
     }, 1000);
   };
@@ -82,7 +82,7 @@ export default function Contact() {
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
+
             {/* LEFT COLUMN - Contact Form */}
             <div>
               <Card>
@@ -99,7 +99,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium font-[Poppins] text-card-foreground mb-2">
                         Your Name *
                       </label>
-                      <Input 
+                      <Input
                         type="text"
                         name="name"
                         value={formData.name}
@@ -115,7 +115,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium font-[Poppins] text-card-foreground mb-2">
                         Email Address *
                       </label>
-                      <Input 
+                      <Input
                         type="email"
                         name="email"
                         value={formData.email}
@@ -131,7 +131,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium font-[Poppins] text-card-foreground mb-2">
                         Phone Number
                       </label>
-                      <Input 
+                      <Input
                         type="tel"
                         name="phone"
                         value={formData.phone}
@@ -146,7 +146,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium font-[Poppins] text-card-foreground mb-2">
                         Subject *
                       </label>
-                      <Input 
+                      <Input
                         type="text"
                         name="subject"
                         value={formData.subject}
@@ -162,7 +162,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium font-[Poppins] text-card-foreground mb-2">
                         Message *
                       </label>
-                      <Textarea 
+                      <Textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
@@ -174,9 +174,9 @@ export default function Contact() {
                     </div>
 
                     {/* Submit button */}
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       className="w-full font-[Poppins]"
                       disabled={isSubmitting}
                       data-testid="button-submit-contact"
@@ -241,7 +241,8 @@ export default function Contact() {
                     <div>
                       <p className="font-medium font-[Poppins] text-card-foreground mb-1">Address</p>
                       <p className="text-muted-foreground font-[Inter] text-sm">
-                        Audet mahat dahik
+                        Shop No. 7, 8, 9, Parivartan CHS, Sector - 6A,
+                        Opp. Saibaba Mandir, Kamothe, Navi mumbai
                       </p>
                     </div>
                   </div>
@@ -254,7 +255,7 @@ export default function Contact() {
                     <div>
                       <p className="font-medium font-[Poppins] text-card-foreground mb-1">Phone</p>
                       <a href="tel:+9157780280802" className="text-primary font-[Inter] text-sm hover:underline">
-                        +915 7780 280 802
+                        Krishna: +91 9322874711
                       </a>
                     </div>
                   </div>
@@ -266,8 +267,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-medium font-[Poppins] text-card-foreground mb-1">Email</p>
-                      <a href="mailto:bvasari.delta@exasioprojs.com" className="text-primary font-[Inter] text-sm hover:underline break-all">
-                        bvasari.delta@exasioprojs.com
+                      <a href="mailto:krishnaenterprises1001@gmail.com" className="text-primary font-[Inter] text-sm hover:underline break-all">
+                        krishnaenterprises1001@gmail.com
                       </a>
                     </div>
                   </div>
@@ -279,7 +280,8 @@ export default function Contact() {
                 <CardHeader>
                   <CardTitle className="text-xl font-[Poppins] flex items-center gap-2">
                     <i className="fas fa-map text-primary"></i>
-                    Location Map
+                    Shop No. 7, 8, 9, Parivartan CHS, Sector - 6A,
+                  Opp. Saibaba Mandir, Kamothe, Navi mumbai
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

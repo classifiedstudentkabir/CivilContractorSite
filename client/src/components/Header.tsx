@@ -13,7 +13,7 @@ import logoImage from "@assets/generated_images/krishna_enterprises_logo.png";
 export default function Header() {
   // Track the current page location using wouter's useLocation hook
   const [location] = useLocation();
-  
+
   // State to control mobile menu visibility (hamburger menu for small screens)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,14 +34,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Flexbox container for header content - logo on left, nav in middle, contact on right */}
         <div className="flex items-center justify-between h-16 gap-4">
-          
+
           {/* LOGO SECTION - Left side */}
           <Link href="/" data-testid="link-home">
             <div className="flex items-center gap-3 hover-elevate px-2 py-1 rounded-md cursor-pointer">
               {/* Company Logo Image */}
-              <img 
-                src={logoImage} 
-                alt="Krishna Enterprises Logo" 
+              <img
+                src={logoImage}
+                alt="Krishna Enterprises Logo"
                 className="h-10 w-10 object-contain"
                 data-testid="img-logo"
               />
@@ -99,8 +99,8 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-sidebar-border" data-testid="nav-mobile">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <Link 
-                  key={item.path} 
+                <Link
+                  key={item.path}
                   href={item.path}
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid={`link-mobile-${item.label.toLowerCase()}`}
@@ -116,7 +116,7 @@ export default function Header() {
               {/* Contact number in mobile menu */}
               <div className="flex items-center gap-2 px-4 py-2 text-sidebar-foreground sm:hidden">
                 <i className="fas fa-phone text-primary"></i>
-                <span className="font-[Inter] text-sm">+915 7780 280 802</span>
+                <span className="font-[Inter] text-sm">+91 9322874711</span>
               </div>
             </nav>
           </div>

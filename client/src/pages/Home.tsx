@@ -1,7 +1,7 @@
 /**
  * HOME PAGE
  * This is the main landing page that visitors see first
- * It includes: Hero section, Welcome message, Services overview, 
+ * It includes: Hero section, Welcome message, Services overview,
  * Featured projects, Why choose us section, and recent feedback
  */
 
@@ -83,16 +83,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold font-[Poppins] text-foreground mb-4">
-              WELCOME TO DELTA KRISHNA ENTERPRISES
+              WELCOME TO KRISHNA ENTERPRISES
             </h2>
             <p className="text-muted-foreground font-[Inter] text-base md:text-lg leading-relaxed mb-6">
-              We are a leading civil contractor specializing in comprehensive construction solutions. 
-              With years of experience and a dedicated team of professionals, we deliver excellence 
+              We are a leading civil contractor specializing in comprehensive construction solutions.
+              With years of experience and a dedicated team of professionals, we deliver excellence
               in every project we undertake.
             </p>
             <p className="text-muted-foreground font-[Inter] text-base leading-relaxed">
-              From MS fabrication to complete interior solutions, we provide end-to-end services 
-              that ensure quality, durability, and customer satisfaction. Our commitment to using 
+              From MS fabrication to complete interior solutions, we provide end-to-end services
+              that ensure quality, durability, and customer satisfaction. Our commitment to using
               premium materials and modern techniques sets us apart in the industry.
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function Home() {
           {/* Services grid - 3 columns on large screens, responsive on smaller screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <ServiceCard 
+              <ServiceCard
                 key={index}
                 icon={service.icon}
                 title={service.title}
@@ -152,7 +152,7 @@ export default function Home() {
           {/* Projects grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
-              <FeaturedProject 
+              <FeaturedProject
                 key={index}
                 image={project.image}
                 title={project.title}
@@ -183,7 +183,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold font-[Poppins] text-foreground mb-8">
                 WHY CHOOSE US?
               </h2>
-              
+
               {/* List of advantages with icons */}
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -197,7 +197,7 @@ export default function Home() {
                     </p>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <i className="fas fa-check text-primary text-sm"></i>
@@ -209,7 +209,7 @@ export default function Home() {
                     </p>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <i className="fas fa-check text-primary text-sm"></i>
@@ -232,16 +232,16 @@ export default function Home() {
               <p className="text-muted-foreground font-[Inter] mb-6">
                 Contact us today for a free consultation and quote. We're here to bring your vision to life.
               </p>
-              
+
               <Link href="/contact">
                 <Button size="lg" className="w-full mb-4" data-testid="button-contact-us">
                   <i className="fas fa-phone mr-2"></i>
                   Contact Us Now
                 </Button>
               </Link>
-              
+
               <div className="text-center text-muted-foreground font-[Inter] text-sm">
-                or call us at <span className="font-semibold text-foreground">+915 7780 280 802</span>
+                or call us at <span className="font-semibold text-foreground">+91 9322874711</span>
               </div>
             </div>
           </div>

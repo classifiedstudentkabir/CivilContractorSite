@@ -280,23 +280,28 @@ export default function Contact() {
                 <CardHeader>
                   <CardTitle className="text-xl font-[Poppins] flex items-center gap-2">
                     <i className="fas fa-map text-primary"></i>
-                    Shop No. 7, 8, 9, Parivartan CHS, Sector - 6A,
-                  Opp. Saibaba Mandir, Kamothe, Navi mumbai
+                    Our Location
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {/* Embedded Google Map - Replace with actual coordinates */}
-                  <div className="w-full h-64 bg-muted rounded-md flex items-center justify-center">
-                    <div className="text-center">
-                      <i className="fas fa-map-marked-alt text-4xl text-muted-foreground mb-2"></i>
-                      <p className="text-muted-foreground font-[Inter] text-sm">
-                        Map will be embedded here
-                      </p>
-                      <p className="text-muted-foreground font-[Inter] text-xs mt-1">
-                        (Google Maps integration)
-                      </p>
-                    </div>
+                  {/* Embedded Google Map */}
+                  <div className="w-full h-80 rounded-md overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8946388551857!2d73.08055!3d19.043889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcdc8e3c3c3c3c3%3A0x3c3c3c3c3c3c3c3c!2s43%2C%20Manisha%20Apartment%2C%20Plot%2042%2C%20Sion%20-%20Panvel%20Hwy%2C%20Sector%206A%2C%20Kamothe%2C%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra%20410209!5e0!3m2!1sen!2sin!4v1234567890"
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Krishna Enterprises Location"
+                      data-testid="iframe-google-map"
+                    ></iframe>
                   </div>
+                  <p className="text-muted-foreground font-[Inter] text-xs mt-3 flex items-center gap-1">
+                    <i className="fas fa-map-pin text-primary"></i>
+                    Near Venkat Hotel, Sector 6A, Kamothe, Navi Mumbai
+                  </p>
                 </CardContent>
               </Card>
             </div>

@@ -165,7 +165,7 @@ export default function Home() {
           {/* View All Projects button */}
           <div className="text-center mt-12">
             <Link href="/projects">
-              <Button size="lg" variant="outline" data-testid="button-view-all-projects">
+              <Button size="lg" data-testid="button-view-all-projects">
                 <i className="fas fa-images mr-2"></i>
                 View All Projects
               </Button>
